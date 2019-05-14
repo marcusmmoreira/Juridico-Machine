@@ -30,7 +30,7 @@ pg_restore -U modelo -h saopaulouser -d processossaopaulodb processossaopaulodb.
 
 .
 
-
+-----------------------------------------------------------------------------------------
 
 
 CREATE TABLE lista_processo
@@ -67,3 +67,28 @@ CREATE TABLE lista_eventos
   evento_data VARCHAR(100) NOT NULL,
   status_pesquisado VARCHAR(50) NOT NULL
 );
+
+
+-----------------------------------------------------------------
+
+docker build -f Dockerfile -t marcus/ubuntu .
+
+docker run -d  --name Containerubuntu marcus/ubuntu
+
+docker exec -it Containerubuntu /bin/bash
+
+cd /importacao/data-integration
+
+chmod +x kitchen.sh
+
+chmod +x spoon.sh
+
+apt-get update
+
+apt-get install software-properties-common  -y
+
+apt-get install openjdk-8-jre -y
+
+
+./kitchen.sh -file=/importacao/p_modelo_gitlab/projeto_modelo/projeto_modelo/Principal.kjb  -level=Minimal
+
