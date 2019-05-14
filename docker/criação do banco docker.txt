@@ -1,0 +1,40 @@
+docker build -f Dockerfile -t marcus/postgres .
+
+
+
+docker run --name Containerpostgres5450 -p 5450:5432 -e POSTGRES_PASSWORD=process -d postgres
+
+
+
+
+docker exec -it Containerpostgres5450 bash
+
+
+
+apt-get update
+
+
+apt-get install wget -y
+
+apt-get install unzip
+
+
+
+
+su postgres
+
+psql
+
+CREATE USER saopaulouser WITH PASSWORD 'process';
+
+CREATE DATABASE processossaopaulodb;
+
+GRANT ALL PRIVILEGES ON DATABASE processossaopaulodb to saopaulouser;
+
+ALTER DATABASE processossaopaulodb OWNER TO saopaulouser;
+
+
+\q
+
+
+pg_restore -U modelo -h localhost -d processossaopaulodb processossaopaulodb.dump  -O -x
