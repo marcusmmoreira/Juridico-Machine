@@ -11,12 +11,17 @@ docker exec -it Containerpostgres5450 bash
 
 
 
+wget https://github.com/marcusmmoreira/Juridico-Machine/raw/master/docker/processossaopaulodb.dump
+
 apt-get update
 
 
 apt-get install wget -y
 
 apt-get install unzip
+
+
+---------------------------
 
 
 
@@ -37,4 +42,4 @@ ALTER DATABASE processossaopaulodb OWNER TO saopaulouser;
 \q
 
 
-pg_restore -U modelo -h localhost -d processossaopaulodb processossaopaulodb.dump  -O -x
+pg_restore -U saopaulouser -h localhost -d processossaopaulodb processossaopaulodb.dump  -O -x

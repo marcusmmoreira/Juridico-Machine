@@ -10,11 +10,13 @@ docker run --name Containerpostgres5450 -p 5450:5432 -e POSTGRES_PASSWORD=proces
 
 docker exec -it Containerpostgres5450 bash
 
+wget https://github.com/marcusmmoreira/Juridico-Machine/raw/master/docker/processossaopaulodb.dump
+
 apt-get update
 apt-get install wget -y
 apt-get install unzip
 
-
+---------------------------
 
 su postgres
 psql
@@ -24,7 +26,7 @@ GRANT ALL PRIVILEGES ON DATABASE processossaopaulodb to saopaulouser;
 ALTER DATABASE processossaopaulodb OWNER TO saopaulouser;
 
 \q
-pg_restore -U modelo -h localhost -d processossaopaulodb processossaopaulodb.dump  -O -x
+pg_restore -U modelo -h saopaulouser -d processossaopaulodb processossaopaulodb.dump  -O -x
 
 .
 
