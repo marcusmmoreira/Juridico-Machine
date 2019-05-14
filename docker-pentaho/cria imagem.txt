@@ -4,6 +4,13 @@ docker run -d  --name Containerubuntu marcus/ubuntu
 
 docker exec -it Containerubuntu /bin/bash
 
+
+cd /importacao/p_modelo_github/
+
+
+
+git clone "https://github.com/marcusmmoreira/Juridico-Machine"
+
 cd /importacao/data-integration
 
 chmod +x kitchen.sh
