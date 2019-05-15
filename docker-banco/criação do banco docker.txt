@@ -19,7 +19,7 @@ apt-get install wget -y
 
 apt-get install unzip
 
-wget https://github.com/marcusmmoreira/Juridico-Machine/raw/master/docker/processossaopaulodb.dump
+wget https://github.com/marcusmmoreira/Juridico-Machine/raw/master/docker-banco/processossaopaulodb.dump
 
 
 
