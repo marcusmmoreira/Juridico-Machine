@@ -10,7 +10,7 @@ docker run --name Containerpostgres5450 -p 5450:5432 -e POSTGRES_PASSWORD=proces
 
 docker exec -it Containerpostgres5450 bash
 
-wget https://github.com/marcusmmoreira/Juridico-Machine/raw/master/docker/processossaopaulodb.dump
+wget https://github.com/marcusmmoreira/Juridico-Machine/raw/master/docker-banco/processossaopaulodb.dump
 
 apt-get update
 apt-get install wget -y
