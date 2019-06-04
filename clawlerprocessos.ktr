@@ -442,9 +442,9 @@
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>processossaopaulodb</database>
-    <port>5450</port>
-    <username>saopaulouser</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb09bc7fdd97bcc9</password>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79b77886c6bbd2</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -463,7 +463,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>5450</attribute>
+        <attribute>5432</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -491,206 +491,6 @@
     <hop>
       <from>REST Client 2</from>
       <to>Split Fields</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split field to rows</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
-      <to>Split Fields 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 3</from>
-      <to>Split Fields 3 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 3 2</from>
-      <to>Split Fields 3 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 3 2 2</from>
-      <to>Split Fields 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 4</from>
-      <to>Split Fields 4 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 4 2</from>
-      <to>Split Fields 4 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 2</from>
-      <to>Filter rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Split Fields 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Dummy (do nothing)</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Replace in string</from>
-      <to>Split Fields 5</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 5</from>
-      <to>Split Fields 5 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 4 2 2</from>
-      <to>Split Fields 4 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 4 2 2 2</from>
-      <to>Replace in string</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Replace in string 2</from>
-      <to>Select values 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2</from>
-      <to>String operations</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 6 2 2</from>
-      <to>Split Fields 6 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Replace in string 3</from>
-      <to>Concat Fields 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 3</from>
-      <to>Database lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2</from>
-      <to>Table output</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2</from>
-      <to>Table output</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 2</from>
-      <to>Database lookup 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup 2</from>
-      <to>atual novo</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup 2</from>
-      <to>preco anterior</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>preco anterior</from>
-      <to>Filter rows 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 3</from>
-      <to>desconto</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 3</from>
-      <to>possivel voltou valor</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>atual novo</from>
-      <to>Filter rows 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 4</from>
-      <to>voltou valor</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>String operations</from>
-      <to>Filter rows 5</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 5</from>
-      <to>Replace in string 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 5</from>
-      <to>Dummy (do nothing) 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Dummy (do nothing) 3</from>
-      <to>Get System Info</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get System Info</from>
-      <to>Select values 5</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 5</from>
-      <to>Replace in string 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Replace in string 4</from>
-      <to>Concat Fields 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Concat Fields 2 2</from>
-      <to>Select values 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Replace in string 4 2</from>
-      <to>Select values 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 4</from>
-      <to>possivel desconto</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 4</from>
-      <to>possivel desconto</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -764,41 +564,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Concat Fields 2</from>
-      <to>Replace in string 4 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Replace in string 4 2 2</from>
-      <to>Select values 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 3</from>
-      <to>Dummy (do nothing) 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 4</from>
-      <to>Select values 4 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 4 2</from>
-      <to>Replace in string 4 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup</from>
-      <to>Add constants</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Add constants</from>
-      <to>Filter rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Generate Rows 2</from>
       <to>Add sequence 2</to>
       <enabled>Y</enabled>
@@ -809,84 +574,9 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Split Fields 5 2</from>
-      <to>Select values 6</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 6</from>
-      <to>Split Fields 5 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 5 2 2</from>
-      <to>Select values 6 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 6 2</from>
-      <to>Split Fields 5 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 5 2 2 2</from>
-      <to>Select values 6 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 6 3</from>
-      <to>Split Fields 5 2 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 5 2 2 2 2</from>
-      <to>Select values 6 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 6 4</from>
-      <to>Split Fields 6</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 6</from>
-      <to>Select values 6 5</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 6 5</from>
-      <to>Split Fields 6 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 6 2</from>
-      <to>Select values 6 6</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 6 6</from>
-      <to>Split Fields 6 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Split Fields 6 2 2 2</from>
-      <to>Select values 6 7</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 6 7</from>
-      <to>Replace in string 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Split Fields</from>
       <to>Sort rows</to>
       <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows</from>
-      <to>Split field to rows</to>
-      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Concat Fields</from>
@@ -923,70 +613,432 @@
       <to>REST Client 2</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>1 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>4 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>5 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>1 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>2 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>5 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>4 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>3 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>1 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>2 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>3 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>4 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>5 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>1 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>2 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>3 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>4 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>5 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>4 5 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>5 5 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>4 5 2</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>5 5 2</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2 5</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>1 5</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>4 5</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>5 5</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>5 4</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>3 5</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>4 4</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>3 4</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2 4</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>1 4</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>1 3</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2 3</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>3 3</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>4 3</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>5 3</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>5 2</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>4 2</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>3 2</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2 2</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>1 2</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>1</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>3</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>4</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>5</from>
+      <to>processo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 7</from>
+      <to>Sort rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 2</from>
+      <to>Unique rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unique rows</from>
+      <to>Split Fields 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2</from>
+      <to>Split Fields 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2</from>
+      <to>Split Fields 2 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2 2 2 2</from>
+      <to>Split Fields 2 2 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2 2</from>
+      <to>Replace in string 6</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Replace in string 6</from>
+      <to>String operations 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String operations 2</from>
+      <to>Sort rows 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 3</from>
+      <to>Unique rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2 2 2</from>
+      <to>Split Fields 2 2 2 2 2 3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2 2 2 3 2</from>
+      <to>Split Fields 2 2 2 2 2 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2 2 2 3</from>
+      <to>Split Fields 2 2 2 2 2 3 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unique rows 2</from>
+      <to>Filter rows 7 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 7 2</from>
+      <to>Split Fields 2 2 2 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>processo</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Filter rows 7</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
+      <to>String operations</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String operations</from>
+      <to>Replace in string 5 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2 2 2 3 3</from>
+      <to>Split Fields 2 2 2 2 2 3 3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2 2 2 3 3 2</from>
+      <to>Select values 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>String operations 3</from>
+      <to>Select values 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Replace in string 5 2</from>
+      <to>Split Fields 2 2 2 2 2 3 3 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Fields 2 2 2 2 2 3 3 2 2</from>
+      <to>String operations 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2 2</from>
+      <to>Database lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>voltou valor 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>voltou valor 2</from>
+      <to>Table output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>set F</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>set F</from>
+      <to>Add constants</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants</from>
+      <to>Update 3</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
-  <step>
-    <name>Add constants</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>vendido</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>F</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>data_validada_venda</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>descricao_olx</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2112</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>Add constants 2</name>
     <type>Constant</type>
@@ -1023,6 +1075,30 @@
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
       </field>
+      <field>
+        <name>b</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>&amp;conversationId=&amp;dadosConsulta.localPesquisa.cdLocal=99&amp;cbPesquisa=NMADVOGADO&amp;dadosConsulta.tipoNuProcesso=UNIFICADO&amp;dadosConsulta.valorConsulta=</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>c</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>&amp;chNmCompleto=true&amp;uuidCaptcha=sajcaptcha_a3320e76c77b4ce393754ea550ee84e8&amp;pbEnviar=Pesquisar</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1033,8 +1109,47 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>16</yloc>
+      <xloc>208</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add constants 2 2</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>F</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1068,8 +1183,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>288</yloc>
+      <xloc>208</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1154,180 +1269,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Concat Fields 2</name>
-    <type>ConcatFields</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator> </separator>
-    <enclosure/>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>N</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>file</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>dia</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>hora</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <ConcatFields>
-      <targetFieldName>Dia com hora</targetFieldName>
-      <targetFieldLength>0</targetFieldLength>
-      <removeSelectedFields>N</removeSelectedFields>
-    </ConcatFields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1904</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Concat Fields 2 2</name>
-    <type>ConcatFields</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator> </separator>
-    <enclosure/>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>N</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name>file</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>hoje</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>hora</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <ConcatFields>
-      <targetFieldName>Dia com hora</targetFieldName>
-      <targetFieldLength>0</targetFieldLength>
-      <removeSelectedFields>N</removeSelectedFields>
-    </ConcatFields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1840</xloc>
-      <yloc>448</yloc>
+      <xloc>208</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1386,7 +1329,7 @@
         <precision>-1</precision>
       </field>
       <field>
-        <name>a</name>
+        <name>b</name>
         <type>String</type>
         <format>#</format>
         <currency/>
@@ -1397,9 +1340,33 @@
         <length>-1</length>
         <precision>-1</precision>
       </field>
+      <field>
+        <name>nome_advogado</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>c</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
     </fields>
     <ConcatFields>
-      <targetFieldName>url</targetFieldName>
+      <targetFieldName>urlcomadv</targetFieldName>
       <targetFieldLength>0</targetFieldLength>
       <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
@@ -1412,390 +1379,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>16</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>local</connection>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>produtos_extraidos</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>ID Anuncio</name>
-        <field>ID Anuncio</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>ID Anuncio</name>
-        <rename>Tenho</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2048</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup 2</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>local</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>produtos_extraidos</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>ID Anuncio</name>
-        <field>ID Anuncio</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>preco atual</name>
-        <rename>preco atual no banco </rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>preco anteior</name>
-        <rename>preco anterio no banco </rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2160</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing)</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>624</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing) 2</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2224</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing) 3</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1664</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Split Fields 3</send_true_to>
-    <send_false_to>Dummy (do nothing)</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>RESTO</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 2</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Table output</send_true_to>
-    <send_false_to>Database lookup 2</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>Tenho</leftvalue>
-        <function>IS NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2160</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 3</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>desconto</send_true_to>
-    <send_false_to>possivel voltou valor</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>preco atual no banco </leftvalue>
-        <function>=</function>
-        <rightvalue>preco anteior</rightvalue>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2368</xloc>
-      <yloc>368</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 4</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>voltou valor</send_true_to>
-    <send_false_to>possivel desconto</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>preco anterio no banco </leftvalue>
-        <function>=</function>
-        <rightvalue>preco atual</rightvalue>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2368</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 5</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Replace in string 3</send_true_to>
-    <send_false_to>Dummy (do nothing) 3</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>dia</leftvalue>
-            <function>&lt;></function>
-            <rightvalue/>
-            <value>
-              <name>constant</name>
-              <type>String</type>
-              <text>HOJE</text>
-              <length>-1</length>
-              <precision>-1</precision>
-              <isnull>N</isnull>
-              <mask/>
-            </value>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <leftvalue>dia</leftvalue>
-            <function>&lt;></function>
-            <rightvalue/>
-            <value>
-              <name>constant</name>
-              <type>String</type>
-              <text>ONTEM</text>
-              <length>-1</length>
-              <precision>-1</precision>
-              <isnull>N</isnull>
-              <mask/>
-            </value>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1792</xloc>
-      <yloc>208</yloc>
+      <xloc>288</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1829,8 +1414,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2640</xloc>
-      <yloc>304</yloc>
+      <xloc>1280</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1921,43 +1506,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>48</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get System Info</name>
-    <type>SystemInfo</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>hoje</name>
-        <type>today start</type>
-      </field>
-      <field>
-        <name>ontem</name>
-        <type>yesterday start</type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1648</xloc>
-      <yloc>368</yloc>
+      <xloc>80</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1987,8 +1537,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2816</xloc>
-      <yloc>304</yloc>
+      <xloc>1456</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2018,8 +1568,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2816</xloc>
-      <yloc>368</yloc>
+      <xloc>1456</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2040,7 +1590,7 @@
     <urlInField>Y</urlInField>
     <dynamicMethod>N</dynamicMethod>
     <methodFieldName/>
-    <urlField>url</urlField>
+    <urlField>urlcomadv</urlField>
     <bodyField/>
     <httpLogin/>
     <httpPassword>Encrypted </httpPassword>
@@ -2086,304 +1636,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>16</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Replace in string</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>Titulo</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>"></replace_string>
-        <replace_by_string/>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1056</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Replace in string 2</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>preco anteior</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>&lt;/p></replace_string>
-        <replace_by_string/>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>preco atual</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>&lt;/p></replace_string>
-        <replace_by_string/>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>preco anteior</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>&lt;/div></replace_string>
-        <replace_by_string/>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>preco atual</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>&lt;/div></replace_string>
-        <replace_by_string/>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1648</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Replace in string 3</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>dia</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string> NOV</replace_string>
-        <replace_by_string>/11/2018</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>dia</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string> OUT</replace_string>
-        <replace_by_string>/10/2018</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>dia</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string> SET</replace_string>
-        <replace_by_string>/09/2018</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>dia</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string> DEZ</replace_string>
-        <replace_by_string>/12/2018</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>dia</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string> JAN</replace_string>
-        <replace_by_string>/01/2019</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>dia</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string> FEV</replace_string>
-        <replace_by_string>/02/2019</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1856</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Replace in string 4</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>hoje</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string> 01:00</replace_string>
-        <replace_by_string/>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1840</xloc>
-      <yloc>368</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Replace in string 4 2</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>Dia com hora</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string> 00:</replace_string>
-        <replace_by_string> 01:</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2016</xloc>
+      <xloc>368</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Replace in string 4 2 2</name>
+    <name>Replace in string 5</name>
     <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
@@ -2395,13 +1654,13 @@
     </partitioning>
     <fields>
       <field>
-        <in_stream_name>Dia com hora</in_stream_name>
+        <in_stream_name>url</in_stream_name>
         <out_stream_name/>
         <use_regex>no</use_regex>
-        <replace_string> 00:</replace_string>
-        <replace_by_string> 01:</replace_by_string>
+        <replace_string>[----------]</replace_string>
+        <replace_by_string/>
         <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
+        <replace_field_by_string>nome_advogado</replace_field_by_string>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
         <is_unicode>no</is_unicode>
@@ -2416,103 +1675,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1952</xloc>
-      <yloc>208</yloc>
+      <xloc>368</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>Produtos</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>512</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>ID Anuncio</name>
-      </field>
-      <field>
-        <name>Link</name>
-      </field>
-      <field>
-        <name>Titulo</name>
-      </field>
-      <field>
-        <name>Bairro</name>
-      </field>
-      <field>
-        <name>Cidade</name>
-      </field>
-      <field>
-        <name>dia</name>
-      </field>
-      <field>
-        <name>hora</name>
-      </field>
-      <field>
-        <name>foto</name>
-      </field>
-      <field>
-        <name>preco atual</name>
-      </field>
-      <field>
-        <name>preco anteior</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1664</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 3</name>
-    <type>SelectValues</type>
+    <name>Sort rows</name>
+    <type>SortRows</type>
     <description/>
     <distribute>N</distribute>
     <custom_distribution/>
@@ -2521,25 +1691,22 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
     <fields>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>Dia com hora</name>
-        <rename>Dia com hora</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>dd/MM/yyyy HH:mm</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
+      <field>
+        <name>valuename</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -2550,394 +1717,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2016</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 4</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>ID Anuncio</name>
-      </field>
-      <field>
-        <name>Link</name>
-      </field>
-      <field>
-        <name>Titulo</name>
-      </field>
-      <field>
-        <name>Bairro</name>
-      </field>
-      <field>
-        <name>Cidade</name>
-      </field>
-      <field>
-        <name>Dia com hora</name>
-        <rename>dia</rename>
-      </field>
-      <field>
-        <name>hora</name>
-      </field>
-      <field>
-        <name>foto</name>
-      </field>
-      <field>
-        <name>preco atual</name>
-      </field>
-      <field>
-        <name>preco anteior</name>
-      </field>
-      <field>
-        <name>Dia com hora</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>dia</name>
-        <rename>dia</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>dd/MM/yyyy HH:mm</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1968</xloc>
-      <yloc>448</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 4 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>dia</name>
-        <rename>dia</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>dd/MM/yyyy</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1984</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 5</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>hoje</name>
-        <rename>hoje</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>dd/MM/yyyy HH:mm</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1744</xloc>
-      <yloc>368</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 6</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>lixo</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1184</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 6 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>lixo</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 6 3</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>lixo</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1312</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 6 4</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>lixo</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1376</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 6 5</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>lixo</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1440</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 6 6</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>lixo</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1488</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 6 7</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>lixo</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1600</xloc>
-      <yloc>160</yloc>
+      <xloc>480</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3371,1075 +2152,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>16</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>Produtos</splitfield>
-    <delimiter>" data-featured=""></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>ID Anuncio</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>RESTO</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>576</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 3</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>RESTO</splitfield>
-    <delimiter>" href="</delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>1</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>2</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 3 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>2</splitfield>
-    <delimiter>" title="</delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>Link</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>Titulo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 3 2 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>Titulo</splitfield>
-    <delimiter>&lt;div class="col-1"></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>Titulo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>Resto</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>800</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 4</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>Resto</splitfield>
-    <delimiter>&lt;div class="OLXad-list-image-box"></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>1</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>Foto</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>880</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 4 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>Foto</splitfield>
-    <delimiter>&lt;p class="text detail-region"></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>Foto</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>regiao</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>928</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 4 2 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>regiao</splitfield>
-    <delimiter>&lt;div class="col-4"></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>regiao</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>data</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 4 2 2 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>regiao</splitfield>
-    <delimiter>&lt;p class="OLXad-list-price"></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>regiao</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>preco</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 5</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>regiao</splitfield>
-    <delimiter>,</delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>Cidade</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>Bairro</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1104</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 5 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>Bairro</splitfield>
-    <delimiter>&lt;/p></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>Bairro</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>lixo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1152</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 5 2 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>data</splitfield>
-    <delimiter>&lt;p class="text mb5px"></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>lixo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>dia</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>hora</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1216</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 5 2 2 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>hora</splitfield>
-    <delimiter>&lt;/p></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>hora</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>lixo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1296</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 5 2 2 2 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>dia</splitfield>
-    <delimiter>&lt;/p></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>dia</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>lixo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1328</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 6</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>Foto</splitfield>
-    <delimiter>&lt;img class="image" src="</delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>lixo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>foto</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1408</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 6 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>foto</splitfield>
-    <delimiter>" alt="</delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>foto</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>lixo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1472</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 6 2 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>preco</splitfield>
-    <delimiter>&lt;p class="OLXad-list-old-price"></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>preco atual</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>preco anteior</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1520</xloc>
-      <yloc>96</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split Fields 6 2 2 2</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>Cidade</splitfield>
-    <delimiter>&lt;/p></delimiter>
-    <enclosure/>
-    <fields>
-      <field>
-        <name>Cidade</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-      <field>
-        <name>lixo</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <currency/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1568</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Split field to rows</name>
-    <type>SplitFieldToRows3</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <splitfield>2</splitfield>
-    <delimiter>&lt;li class="item" data-list_id="</delimiter>
-    <newfield>Produtos</newfield>
-    <rownum>N</rownum>
-    <rownum_field/>
-    <resetrownumber>Y</resetrownumber>
-    <delimiter_is_regex>N</delimiter_is_regex>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>208</yloc>
+      <xloc>368</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4480,8 +2194,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2560</xloc>
-      <yloc>304</yloc>
+      <xloc>1200</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4522,14 +2236,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2560</xloc>
-      <yloc>368</yloc>
+      <xloc>1200</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>String operations</name>
-    <type>StringOperations</type>
+    <name>Stream lookup 3</name>
+    <type>StreamLookup</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -4538,138 +2252,23 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>ID Anuncio</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>none</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>Link</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>none</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>Titulo</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>upper</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>Bairro</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>upper</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>Cidade</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>upper</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>dia</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>upper</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>hora</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>none</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>foto</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>none</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>preco atual</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>none</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-      <field>
-        <in_stream_name>preco anteior</in_stream_name>
-        <out_stream_name/>
-        <trim_type>both</trim_type>
-        <lower_upper>none</lower_upper>
-        <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
-        <init_cap>no</init_cap>
-        <mask_xml>none</mask_xml>
-        <digits>none</digits>
-        <remove_special_characters>none</remove_special_characters>
-      </field>
-    </fields>
+    <from>lista_advogados</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>Status</name>
+        <field>status_pesquisado</field>
+      </key>
+      <value>
+        <name>nome_advogado</name>
+        <rename>nome_advogado</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -4679,107 +2278,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1744</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>local</connection>
-    <schema/>
-    <table>Produtos_extraidos</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-      <field>
-        <column_name>ID Anuncio</column_name>
-        <stream_name>ID Anuncio</stream_name>
-      </field>
-      <field>
-        <column_name>Link</column_name>
-        <stream_name>Link</stream_name>
-      </field>
-      <field>
-        <column_name>Titulo</column_name>
-        <stream_name>Titulo</stream_name>
-      </field>
-      <field>
-        <column_name>Bairro</column_name>
-        <stream_name>Bairro</stream_name>
-      </field>
-      <field>
-        <column_name>Cidade</column_name>
-        <stream_name>Cidade</stream_name>
-      </field>
-      <field>
-        <column_name>dia</column_name>
-        <stream_name>dia</stream_name>
-      </field>
-      <field>
-        <column_name>hora</column_name>
-        <stream_name>hora</stream_name>
-      </field>
-      <field>
-        <column_name>foto</column_name>
-        <stream_name>foto</stream_name>
-      </field>
-      <field>
-        <column_name>preco atual</column_name>
-        <stream_name>preco atual</stream_name>
-      </field>
-      <field>
-        <column_name>preco anteior</column_name>
-        <stream_name>preco anteior</stream_name>
-      </field>
-      <field>
-        <column_name>Dia com hora</column_name>
-        <stream_name>Dia com hora</stream_name>
-      </field>
-      <field>
-        <column_name>vendido</column_name>
-        <stream_name>vendido</stream_name>
-      </field>
-      <field>
-        <column_name>data_validada_venda</column_name>
-        <stream_name>data_validada_venda</stream_name>
-      </field>
-      <field>
-        <column_name>descricao_olx</column_name>
-        <stream_name>descricao_olx</stream_name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2256</xloc>
+      <xloc>208</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -4828,8 +2327,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2800</xloc>
-      <yloc>224</yloc>
+      <xloc>1440</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4877,43 +2376,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2800</xloc>
-      <yloc>448</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>atual novo</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Filter rows 4</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>preco atual</leftvalue>
-        <function>&lt;></function>
-        <rightvalue>preco atual no banco </rightvalue>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2256</xloc>
-      <yloc>304</yloc>
+      <xloc>1440</xloc>
+      <yloc>688</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4937,8 +2401,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2736</xloc>
-      <yloc>304</yloc>
+      <xloc>1376</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4962,8 +2426,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2736</xloc>
-      <yloc>368</yloc>
+      <xloc>1376</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4987,8 +2451,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2464</xloc>
-      <yloc>368</yloc>
+      <xloc>1104</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5087,8 +2551,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2928</xloc>
-      <yloc>368</yloc>
+      <xloc>1568</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5112,8 +2576,40 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2640</xloc>
-      <yloc>224</yloc>
+      <xloc>1280</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lista_advogados</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>local</connection>
+    <sql>SELECT * from lista_advogados where status_pesquisado ='F' limit 1</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5137,8 +2633,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2464</xloc>
-      <yloc>432</yloc>
+      <xloc>1104</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5162,43 +2658,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2464</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>preco anterior</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Filter rows 3</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>preco anteior</leftvalue>
-        <function>&lt;></function>
-        <rightvalue>preco anterio no banco </rightvalue>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2256</xloc>
-      <yloc>368</yloc>
+      <xloc>1104</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5297,8 +2758,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2928</xloc>
-      <yloc>304</yloc>
+      <xloc>1568</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5322,13 +2783,2512 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2464</xloc>
+      <xloc>1104</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>1</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>1</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>2</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>3</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>4</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>5</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>5</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>1 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>6</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>2 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>7</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>3 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>8</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>4 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>9</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>5 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>10</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>1 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>11</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>0</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>2 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>12</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>3 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>13</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>4 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>14</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>5 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>15</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>1 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>16</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>2 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>17</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>3 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>18</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>4 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>19</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>5 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>20</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>1 5</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>21</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>2 5</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>22</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>3 5</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>23</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>4 5</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>24</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>5 5</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>25</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>4 5 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>26</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>5 5 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>27</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>processo</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Accept</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Referer</name>
+        <rename/>
+      </field>
+      <field>
+        <name>User-Agent</name>
+        <rename/>
+      </field>
+      <field>
+        <name>X-Requested-With</name>
+        <rename/>
+      </field>
+      <field>
+        <name>valuename</name>
+        <rename/>
+      </field>
+      <field>
+        <name>url_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>a</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dani</name>
+        <rename/>
+      </field>
+      <field>
+        <name>b</name>
+        <rename/>
+      </field>
+      <field>
+        <name>c</name>
+        <rename/>
+      </field>
+      <field>
+        <name>urlcomadv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>processo</name>
+        <rename>processo</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows 7</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Sort rows 2</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>processo</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
       <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Sort rows</name>
+    <name>Sort rows 2</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -5347,7 +5307,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>valuename</name>
+        <name>processo</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -5364,14 +5324,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>112</yloc>
+      <xloc>1024</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>lista_advogados</name>
-    <type>TableInput</type>
+    <name>Unique rows</name>
+    <type>Unique</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -5380,50 +5340,14 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>local</connection>
-    <sql>SELECT * from lista_advogados where status_pesquisado ='F' limit 1</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>48</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Add constants 2 2</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
+    <count_rows>N</count_rows>
+    <count_field/>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
     <fields>
       <field>
-        <name>Status</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>F</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
+        <name>processo</name>
+        <case_insensitive>N</case_insensitive>
       </field>
     </fields>
     <attributes/>
@@ -5435,14 +5359,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>144</yloc>
+      <xloc>912</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Stream lookup 3</name>
-    <type>StreamLookup</type>
+    <name>Split Fields 2 2</name>
+    <type>FieldSplitter</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -5451,23 +5375,41 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <from>lista_advogados</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>Status</name>
-        <field>status_pesquisado</field>
-      </key>
-      <value>
-        <name>nome_advogado</name>
-        <rename>nome_advogado</rename>
-        <default/>
+    <splitfield>processo</splitfield>
+    <delimiter>&lt;a href="</delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>resto</name>
+        <id/>
+        <idrem>N</idrem>
         <type>String</type>
-      </value>
-    </lookup>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>link e processo</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -5477,13 +5419,253 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>80</yloc>
+      <xloc>848</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Replace in string 5</name>
+    <name>Split Fields 2 2 2</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>link e processo</splitfield>
+    <delimiter>" class="linkProcesso"></delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>linkProcesso</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>numero processo  +itens</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Fields 2 2 2 2</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>numero processo  +itens</splitfield>
+    <delimiter>&lt;span class="" ></delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>primeiro numero processo</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>numero processo  +itens</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Fields 2 2 2 2 2</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>natureza</splitfield>
+    <delimiter>&lt;/span></delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>segundo numero processo</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>natureza</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Fields 2 2 2 2 2 2</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>numero processo  +itens</splitfield>
+    <delimiter>    &lt;br/></delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>natureza</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>processo  +itens</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Replace in string 6</name>
     <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
@@ -5495,13 +5677,13 @@
     </partitioning>
     <fields>
       <field>
-        <in_stream_name>url</in_stream_name>
+        <in_stream_name>primeiro numero processo</in_stream_name>
         <out_stream_name/>
         <use_regex>no</use_regex>
-        <replace_string>[----------]</replace_string>
+        <replace_string>&lt;/a></replace_string>
         <replace_by_string/>
         <set_empty_string>N</set_empty_string>
-        <replace_field_by_string>nome_advogado</replace_field_by_string>
+        <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
         <is_unicode>no</is_unicode>
@@ -5516,24 +5698,1296 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>336</xloc>
-      <yloc>16</yloc>
+      <xloc>688</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>String operations 2</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>primeiro numero processo</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 3</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>primeiro numero processo</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Unique rows 2</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <count_rows>N</count_rows>
+    <count_field/>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <fields>
+      <field>
+        <name>primeiro numero processo</name>
+        <case_insensitive>N</case_insensitive>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Fields 2 2 2 2 2 3</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>restoadv</splitfield>
+    <delimiter>Advogado(a):&lt;/span></delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>resto</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>advogado</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Fields 2 2 2 2 2 3 2</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>processo  +itens</splitfield>
+    <delimiter>Recebido em:&lt;/span></delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>restoadv</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>recebido + resto</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Fields 2 2 2 2 2 3 3</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>recebido + resto</splitfield>
+    <delimiter>&lt;/div></delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>datarecebida+vara</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>restofim</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows 7 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Split Fields 2 2 2 2 2 2</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>primeiro numero processo</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>url</name>
+      </remove>
+      <remove>
+        <name>Accept</name>
+      </remove>
+      <remove>
+        <name>Referer</name>
+      </remove>
+      <remove>
+        <name>User-Agent</name>
+      </remove>
+      <remove>
+        <name>X-Requested-With</name>
+      </remove>
+      <remove>
+        <name>valuename</name>
+      </remove>
+      <remove>
+        <name>url_1</name>
+      </remove>
+      <remove>
+        <name>Status</name>
+      </remove>
+      <remove>
+        <name>a</name>
+      </remove>
+      <remove>
+        <name>dani</name>
+      </remove>
+      <remove>
+        <name>b</name>
+      </remove>
+      <remove>
+        <name>c</name>
+      </remove>
+      <remove>
+        <name>urlcomadv</name>
+      </remove>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>resto</name>
+      </remove>
+      <remove>
+        <name>resto_1</name>
+      </remove>
+      <remove>
+        <name>restofim</name>
+      </remove>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>String operations</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>linkProcesso</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>primeiro numero processo</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>segundo numero processo</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>natureza</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>advogado</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>datarecebida+vara</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Replace in string 5 2</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>linkProcesso</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;/div></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>primeiro numero processo</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;/div></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>segundo numero processo</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;/div></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>natureza</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;/div></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>advogado</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;/div></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>datarecebida+vara</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;/div></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>linkProcesso</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;b>/&lt;/b></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>primeiro numero processo</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;b>/&lt;/b></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>segundo numero processo</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;b>/&lt;/b></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>natureza</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;b>/&lt;/b></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>advogado</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;b>/&lt;/b></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>datarecebida+vara</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&lt;b>/&lt;/b></replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>String operations 3</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>linkProcesso</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>primeiro numero processo</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>segundo numero processo</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>natureza</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>advogado</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>data recebimento</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+      <field>
+        <in_stream_name>vara</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>upper</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Fields 2 2 2 2 2 3 3 2</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>advogado</splitfield>
+    <delimiter>&lt;div</delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>advogado</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>resto</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 2 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>data recebimento</name>
+        <rename>data recebimento</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd/MM/yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>896</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Fields 2 2 2 2 2 3 3 2 2</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>datarecebida+vara</splitfield>
+    <delimiter>-</delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>data recebimento</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>vara</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>784</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>local</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>lista_processo</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>primeiro numero processo</name>
+        <field>numero_processo</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>numero_processo</name>
+        <rename>numero_processo</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>voltou valor 2</send_true_to>
+    <send_false_to>set F</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>numero_processo</leftvalue>
+        <function>IS NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>local</connection>
+    <schema/>
+    <table>lista_processo</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>url_processo</column_name>
+        <stream_name>linkProcesso</stream_name>
+      </field>
+      <field>
+        <column_name>numero_processo</column_name>
+        <stream_name>primeiro numero processo</stream_name>
+      </field>
+      <field>
+        <column_name>natureza_processo</column_name>
+        <stream_name>natureza</stream_name>
+      </field>
+      <field>
+        <column_name>data_recebimento</column_name>
+        <stream_name>data recebimento</stream_name>
+      </field>
+      <field>
+        <column_name>advogado</column_name>
+        <stream_name>advogado</stream_name>
+      </field>
+      <field>
+        <column_name>segundo_n_processo</column_name>
+        <stream_name>segundo numero processo</stream_name>
+      </field>
+      <field>
+        <column_name>vara</column_name>
+        <stream_name>vara</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>voltou valor 2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>set F</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update 3</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>local</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>lista_advogados</table>
+      <key>
+        <name>nome_advogado</name>
+        <field>nome_advogado</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>status_pesquisado</name>
+        <rename>status_pesquisado ='F'</rename>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add constants</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>status_pesquisado ='F'</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>T</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>640</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step_error_handling>
-    <error>
-      <source_step>Select values 3</source_step>
-      <target_step>Dummy (do nothing) 2</target_step>
-      <is_enabled>Y</is_enabled>
-      <nr_valuename/>
-      <descriptions_valuename/>
-      <fields_valuename/>
-      <codes_valuename/>
-      <max_errors/>
-      <max_pct_errors/>
-      <min_pct_rows/>
-    </error>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
