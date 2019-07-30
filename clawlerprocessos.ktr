@@ -429,7 +429,7 @@
     <created_user>-</created_user>
     <created_date>2018/11/02 09:49:54.819</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019/07/23 15:53:40.590</modified_date>
+    <modified_date>2019/07/30 14:29:12.515</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -488,11 +488,6 @@
   </connection>
   <order>
     <hop>
-      <from>REST Client 2</from>
-      <to>Split Fields</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Generate Rows 2</from>
       <to>Add sequence 2</to>
       <enabled>Y</enabled>
@@ -510,11 +505,6 @@
     <hop>
       <from>Concat Fields</from>
       <to>Add constants 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>lista_advogados</from>
-      <to>Stream lookup 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -948,11 +938,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add constants</from>
-      <to>Update 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>voltou valor 2</from>
       <to>Add constants 3</to>
       <enabled>Y</enabled>
@@ -970,6 +955,61 @@
     <hop>
       <from>Concat Fields 3</from>
       <to>REST Client 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 3</from>
+      <to>Stream lookup 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lista_advogados</from>
+      <to>Add constants 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants 4</from>
+      <to>Select values 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants 5</from>
+      <to>Update 3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>REST Client 2</from>
+      <to>Filter rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 2</from>
+      <to>Split Fields</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 2</from>
+      <to>Sort rows 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 4</from>
+      <to>Unique rows 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unique rows 3</from>
+      <to>Add constants 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants</from>
+      <to>Select values 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 4</from>
+      <to>Update 3</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -3164,6 +3204,84 @@
     </GUI>
   </step>
   <step>
+    <name>Add constants 4</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>status_pesquisado</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>F</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add constants 5</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>status_pesquisado ='F'</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>T</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>272</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Add sequence 2</name>
     <type>Sequence</type>
     <description/>
@@ -3478,6 +3596,50 @@
     </GUI>
   </step>
   <step>
+    <name>Filter rows 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Split Fields</send_true_to>
+    <send_false_to>Sort rows 4</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>code</leftvalue>
+        <function>=</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>Integer</type>
+          <text>200</text>
+          <length>-1</length>
+          <precision>0</precision>
+          <isnull>N</isnull>
+          <mask>####0;-####0</mask>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Filter rows 7</name>
     <type>FilterRows</type>
     <description/>
@@ -3762,7 +3924,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
+      <xloc>304</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -4127,6 +4289,51 @@
     </GUI>
   </step>
   <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>id_partes_processo</name>
+      </field>
+      <field>
+        <name>numero_processo</name>
+      </field>
+      <field>
+        <name>nome_parte</name>
+        <rename>nome_advogado</rename>
+      </field>
+      <field>
+        <name>condicao</name>
+      </field>
+      <field>
+        <name>status_pesquisado_1</name>
+        <rename>status_pesquisado</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Sort rows</name>
     <type>SortRows</type>
     <description/>
@@ -4249,6 +4456,48 @@
     <GUI>
       <xloc>592</xloc>
       <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 4</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>nome_advogado</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4682,7 +4931,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>432</xloc>
       <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
@@ -5298,7 +5547,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <from>lista_advogados</from>
+    <from>Select values 3</from>
     <input_sorted>N</input_sorted>
     <preserve_memory>Y</preserve_memory>
     <sorted_list>N</sorted_list>
@@ -5740,6 +5989,41 @@
     </GUI>
   </step>
   <step>
+    <name>Unique rows 3</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <count_rows>N</count_rows>
+    <count_field/>
+    <reject_duplicate_row>N</reject_duplicate_row>
+    <error_description/>
+    <fields>
+      <field>
+        <name>nome_advogado</name>
+        <case_insensitive>N</case_insensitive>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>272</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Update 3</name>
     <type>Update</type>
     <description/>
@@ -5758,10 +6042,10 @@
     <ignore_flag_field/>
     <lookup>
       <schema/>
-      <table>lista_advogados</table>
+      <table>lista_partes_processo</table>
       <key>
         <name>nome_advogado</name>
-        <field>nome_advogado</field>
+        <field>nome_parte</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -5779,8 +6063,53 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>560</xloc>
       <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Update 3 2</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>local</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema/>
+      <table>lista_partes_processo</table>
+      <key>
+        <name>nome_advogado</name>
+        <field>nome_parte</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>status_pesquisado</name>
+        <rename>status_pesquisado ='F'</rename>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5796,7 +6125,8 @@
       <schema_name/>
     </partitioning>
     <connection>local</connection>
-    <sql>SELECT * from lista_advogados where status_pesquisado ='F' limit 1</sql>
+    <sql>select * from lista_partes_processo where status_pesquisado is null and condicao = 'ADVOGADO' limit 1 ;
+</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -5811,7 +6141,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>16</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -5937,6 +6267,46 @@
     <GUI>
       <xloc>880</xloc>
       <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>nome_advogado</name>
+        <rename/>
+      </field>
+      <field>
+        <name>status_pesquisado ='F'</name>
+        <rename/>
+      </field>
+      <field>
+        <name>numero_processo</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>640</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
