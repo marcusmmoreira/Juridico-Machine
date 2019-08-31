@@ -1,13 +1,13 @@
 <job>
-  <name>Job 1 - ADV BUSCA PROCESSO</name>
+  <name>Job 4</name>
   <description/>
   <extended_description/>
   <job_version/>
-  <directory>/pentaho</directory>
+  <directory>/jobs</directory>
   <created_user>-</created_user>
-  <created_date>2019/07/23 11:11:47.115</created_date>
+  <created_date>2019/08/01 17:13:37.343</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2019/07/30 17:43:59.763</modified_date>
+  <modified_date>2019/08/01 17:14:09.590</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -293,9 +293,9 @@
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>Y</repeat>
-      <schedulerType>1</schedulerType>
-      <intervalSeconds>1</intervalSeconds>
-      <intervalMinutes>0</intervalMinutes>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
       <hour>12</hour>
       <minutes>0</minutes>
       <weekDay>1</weekDay>
@@ -303,20 +303,20 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>272</xloc>
-      <yloc>256</yloc>
+      <xloc>318</xloc>
+      <yloc>226</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>clawlerprocessos</name>
+      <name>workerprocesso2</name>
       <description/>
       <type>TRANS</type>
       <attributes/>
       <specification_method>rep_name</specification_method>
       <trans_object_id/>
       <filename/>
-      <transname>clawlerprocessos</transname>
-      <directory>/</directory>
+      <transname>workerprocesso2</transname>
+      <directory>/workers</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -342,8 +342,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>448</xloc>
-      <yloc>256</yloc>
+      <xloc>480</xloc>
+      <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -354,27 +354,15 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>640</xloc>
-      <yloc>256</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Success 2</name>
-      <description/>
-      <type>SUCCESS</type>
-      <attributes/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>640</xloc>
-      <yloc>176</yloc>
+      <xloc>702</xloc>
+      <yloc>226</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
   <hops>
     <hop>
       <from>Start</from>
-      <to>clawlerprocessos</to>
+      <to>workerprocesso2</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -382,21 +370,12 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>clawlerprocessos</from>
+      <from>workerprocesso2</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>clawlerprocessos</from>
-      <to>Success 2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>
